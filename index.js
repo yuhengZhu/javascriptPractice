@@ -1,5 +1,48 @@
 function ajaxFunc() {
 	alert("HelloWorld");
+	doGet("http://sync-scm.laobai.com/ping");
+	// doPost("http://sync-scm.laobai.com/ping", JSON.stringify({'name':"name",'passwd':"passwd"}));
+}
+
+var xmlHttp;
+
+function createxmlHttpRequst() {
+
+	if (window.ActiveXObject) {
+		xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} else {
+		xmlHttp = new XMLHttpRequest();
+	}
+}
+
+function doGet(url) {
+	createxmlHttpRequst();
+	xmlHttp.open("GET", url);
+	xmlHttp.send(null);
+	xmlHttp.onreadystatechange = function() {
+		if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
+			alert('success' + xmlHttp.responseText);
+		} else {
+			alert('fail');
+		}
+	}
+}
+
+function doPost(url, data) {
+	createxmlHttpRequst();
+	xmlHttp.open("POST", url);
+	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlHttp.send(data);
+	xmlHttp.onreadystatechange = function() {
+		if ((xmlHttp.readyState == 4) && (xmlHttp.status == 200)) {
+			alert('success');
+		} else {
+			alert('fail');
+		}
+	}
+}
+
+function origin() {
 	//获取按钮list
      var btnList = document.querySelectorAll('.starBtn');
          //循环绑定点击事件
