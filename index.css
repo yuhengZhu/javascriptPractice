@@ -1,19 +1,76 @@
 <style>
-	.div1 {
-      width: 200px;
-      height: 200px;
-      border: 1px solid red;
-      margin: 20px auto;
-     }
 
-     .div2 {
-      width: 300px;
-	  height: 100px;
-      border: 1px solid red;
-      margin: 20px auto;
-     }
+  header {
+    max-width: 640px;
+    background-color: #fff
+  }
 
-     body {
-         text-align: center; 
-     }
+  body {
+    /*text-align: center; */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    color: #333;
+    background-color: #f1f0ee;
+  }
+
+  .box {
+
+  }
+
+  .slide {
+    position: relative;
+    max-width: 640px;
+  }
+
+	.search {
+
+  }
+
+  .serviceset {
+    max-width: 640px;
+    height: 393.19px;
+    background-color: #fff
+  }
+
+  .row {
+    height: 50%;
+  }
+
+  .col-3 {
+    height: 100%;
+    width: 24%;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .thumbnail  {
+    height: 100%;
+    width: 100%;
+  }
+
+  .thumbnail img {
+    margin-bottom: 0.3rem;
+  }
+
+  .thumbnailSpan {
+    display: block;
+  }
+
+  .enterprise {
+    max-width: 640px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .enterpriseUser {
+    background: #fff
+  }
+
+  .serviceRecommendation {
+
+  }
+
+  
+  
 </style>
